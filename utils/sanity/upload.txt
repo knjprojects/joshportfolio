@@ -1,0 +1,7 @@
+import { client } from "./client"
+
+export async function uploadFile(file: File) {
+    const asset = await client.assets.upload("file", file)
+
+    return asset
+}

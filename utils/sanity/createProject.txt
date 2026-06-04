@@ -1,0 +1,24 @@
+import { client } from "./client"
+
+export async function createProject(data: {
+    title: string
+    description: string
+    type: string
+    mediaUrl: string
+    public_id: string
+    asset_id:string
+}) {
+    return client.create({
+        _type: "project",
+        title: data.title,
+        description: data.description,
+        type: data.type,
+
+        media: {
+            url: data.mediaUrl,
+        },
+        public_id: data.public_id,
+        asset_id : data.asset_id
+    })
+    
+    }
