@@ -73,7 +73,7 @@ export const NavLinks = [
 // TYPES
 // =========================
 
-export type ThemeName = "forest" | "cloud" | "cosmic"
+/*export type ThemeName = "forest" | "cloud" | "cosmic"
 
 export type ThemeTokens = {
   card: string
@@ -164,3 +164,117 @@ export const theme: Record<ThemeName, ThemeTokens> = {
     hover: base.hover,
   },
 }
+*/
+
+export const theme = {
+  // BASE GLASS CARD (single source of truth)
+  card: `
+    rounded-2xl
+    border
+    border-white/10
+    bg-white/5
+    backdrop-blur-md
+    transition-all
+    duration-300
+  `,
+
+  // BUTTON
+  button: `
+    rounded-xl
+    px-4
+    py-2
+    bg-purple-500/20
+    hover:bg-purple-500/30
+    transition-all
+    duration-300
+  `,
+
+  // REPO CARD = BASE CARD + STYLE
+  repoCard: `
+    rounded-2xl
+    border
+    border-white/10
+    bg-white/5
+    backdrop-blur-md
+    shadow-lg
+    shadow-cyan-500/10
+    p-4
+    transition-all
+    duration-300
+  `,
+    glass: `
+    bg-white/5
+    backdrop-blur-md
+    backdrop-saturate-150
+    border-white/10
+    shadow-lg
+    shadow-black/20
+  `,
+
+  glassHover: `
+    hover:bg-white/10
+    hover:border-white/20
+    hover:shadow-purple-500/20
+    transition-all
+    duration-300
+  `,
+
+  // HOVER SYSTEM (reusable everywhere)
+  hoverLift: `
+    cursor-pointer
+    hover:scale-[1.02]
+    hover:-translate-y-1
+    hover:border-purple-400/30
+    hover:shadow-purple-500/20
+  `,
+
+  // TEXT HELPERS (optional but useful later)
+  title: `
+    text-white
+    font-semibold
+  `,
+
+  subtitle: `
+    text-gray-400
+    text-sm
+  `,
+  // ✨ RESPONSIVE DISPLAY TEXT SYSTEM
+  display: {
+    h1: `
+      text-2xl
+      sm:text-3xl
+      md:text-4xl
+      lg:text-5xl
+      font-bold
+      tracking-tight
+    `,
+
+    h2: `
+      text-xl
+      sm:text-2xl
+      md:text-3xl
+      font-semibold
+      tracking-tight
+    `,
+
+    h3: `
+      text-lg
+      sm:text-xl
+      md:text-2xl
+      font-medium
+    `,
+
+    body: `
+      text-sm
+      sm:text-base
+      md:text-lg
+      text-gray-300
+    `,
+
+    small: `
+      text-xs
+      sm:text-sm
+      text-gray-400
+    `,
+  },
+};

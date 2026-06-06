@@ -4,10 +4,11 @@ import ProjectCard from "@/components/ProjectCard"
 import { getProjects } from "@/utils/sanity/queries"
 import CloudinarySanityUpload from "@/components/CloudinarySanityUpload"
 import { Project } from "@/typings"
-import GoogleSignInButton from "@/components/GoogleSignInButton"
+import GoogleSignInButton from "@/components/FirebaseGoogleSignInButton"
 import GithubLoginButton from "@/components/GithubLogInButton"
 import UserProfile from "@/components/UserProfile"
 import { useSession } from "next-auth/react";
+import GoogleConnectButton from "@/components/GoogleConnectButton"
 
 const Page = () => {
   const [projects, setProjects] = useState<Project[]>([])
@@ -25,6 +26,7 @@ const Page = () => {
   return (
     <div className="bg-teal-600 flex-col items-center w-full h-full justify-center flex ">
       <div className="flex flex-col w-64 h-32 bg-transparent justify-center mt-12">
+        <GoogleConnectButton/>
         <CloudinarySanityUpload />
       </div>
       <div

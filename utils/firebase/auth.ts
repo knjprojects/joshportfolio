@@ -2,13 +2,13 @@ import { initializeApp } from "firebase/app"
 import { getAuth,GoogleAuthProvider } from "firebase/auth"
 import { getApps,getApp } from "firebase/app";
 const firebaseConfig = {
-  apiKey: "AIzaSyBMWaDVTJ7UUisZLJT-Z-vMtzsn6xPlPGE",
-  authDomain: "portfolio-7c039.firebaseapp.com",
-  projectId: "portfolio-7c039",
-  storageBucket: "portfolio-7c039.firebasestorage.app",
-  messagingSenderId: "817164428559",
-  appId: "1:817164428559:web:3d39633e047af0eaae8a7a",
-  measurementId: "G-E1PBNCN3ZH"
+  apiKey: "AIzaSyB6wqj40TIcX9bvaB93DX7Jvgep1z0Y8a4",
+  authDomain: "joshthedevportfolio.firebaseapp.com",
+  projectId: "joshthedevportfolio",
+  storageBucket: "joshthedevportfolio.firebasestorage.app",
+  messagingSenderId: "619815800396",
+  appId: "1:619815800396:web:c610dedafbc3471e97eee9",
+  measurementId: "G-5GZJ30P3ER"
 };
 //const app = initializeApp(firebaseConfig)
 const app = !getApps().length ? initializeApp(firebaseConfig) : getApp();

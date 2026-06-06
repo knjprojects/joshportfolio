@@ -4,6 +4,7 @@ import './globals.css'
 import Navbar from '@/components/Navbar'
 import Transition from '@/components/Transition'
 import Providers from './provider'
+
 //const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
@@ -18,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={ ``}> 
+      <body className={ `w-full h-full`}> 
         <Providers>
           <Navbar />
           <Transition />

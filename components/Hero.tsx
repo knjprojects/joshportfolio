@@ -36,7 +36,7 @@ const HeroSection = () => {
               repeat={Infinity}
             />
           </h1>
-          <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
+          <p className="text-base sm:text-lg mb-6 lg:text-xl">
             With experience in graphic design, game development, database structuring, and many more within my pursuit of my Computer Science at the University of the West Indies,  and through freelancing over the past 4 years, I am a valuable team player who sees no limit to my potential and what I can bring to any group of aspiring artistes and business owners. I aim to make a huge dent in the cultural landscape not only in Tech but also the lifestyle we live as a people
           </p>
           <div>

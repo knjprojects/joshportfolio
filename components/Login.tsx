@@ -33,8 +33,6 @@ const GoogleSignInButton = () => {
         w-full
         p-3
         rounded-lg
-        bg-white
-        text-black
         font-medium
         transition-all
         duration-200

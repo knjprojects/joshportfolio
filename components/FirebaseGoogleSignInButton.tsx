@@ -4,7 +4,7 @@ import { signInWithPopup } from "firebase/auth";
 import { auth, googleProvider } from "@/utils/firebase/auth";
 import { useState } from "react";
 
-const GoogleSignInButton = () => {
+const FirebaseGoogleSignInButton = () => {
   const [loading, setLoading] = useState(false);
 
   const handleGoogleLogin = async () => {
@@ -52,4 +52,4 @@ const GoogleSignInButton = () => {
   );
 };
 
-export default GoogleSignInButton;
+export default FirebaseGoogleSignInButton;

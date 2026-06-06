@@ -1,5 +1,5 @@
 "use client"
-import { theme } from "@/utils/lib/constants";
+
 import React, { useState } from "react"
 import Link from "next/link"
 import clsx from "clsx";
@@ -72,7 +72,7 @@ const ProjectCard = ({ title, description, image, link }: Props) => {
             <div
                 style={{ backgroundImage: `url(${image})` }}
                 className={clsx(
-                    theme.card,
+                    
                     "absolute w-full h-full backface-hidden bg-cover bg-center rounded-2xl overflow-hidden"
                 )}
                 >
@@ -87,7 +87,7 @@ const ProjectCard = ({ title, description, image, link }: Props) => {
         <div
             style={{ backgroundImage: `url(${image})` }}
             className={clsx(
-                theme.card,
+                
                 "absolute w-full h-full rotate-y-180 backface-hidden bg-cover bg-center rounded-2xl overflow-hidden"
             )}
             >

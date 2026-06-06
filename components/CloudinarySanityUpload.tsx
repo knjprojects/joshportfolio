@@ -1,8 +1,8 @@
 "use client"
 
-import { theme } from "@/utils/lib/constants"
 import React, { useState } from "react"
 import { useDragAndDrop } from "@/utils/hooks/useDragandDrop"
+import clsx from "clsx"
 
 type UploadState = "idle" | "uploading" | "success"
 
@@ -70,7 +70,7 @@ const CloudinarySanityUpload = () => {
         setDescription("")
         setType("3d-model")
       }, 2000)
-    } catch (err) {
+    } catch {
       setStatus("idle")
     }
   }
@@ -78,59 +78,71 @@ const CloudinarySanityUpload = () => {
   const showForm = Boolean(file)
 
   return (
-    <div className={`mt-14 flex flex-col gap-4 w-full max-w-md ${theme.card} ${theme.glass} p-4`}>
+    <div className="mt-14 flex flex-col gap-4 w-full max-w-md p-4 rounded-2xl border border-white/10 bg-black/20 backdrop-blur-md">
 
-      {/* MAIN FILE */}
+      {/* MAIN FILE DROP */}
       <label
         {...mainDrop.dragProps}
-        className={`${theme.dropzone} ${mainDrop.isDragging ? "border-purple-400 bg-purple-500/10" : ""}`}
+        className={clsx(
+          "flex flex-col items-center justify-center h-32 rounded-xl border-2 border-dashed border-white/20 bg-black/10 hover:bg-black/20 transition cursor-pointer",
+          mainDrop.isDragging && "border-white/40"
+        )}
       >
         <input type="file" onChange={onFileChange} className="hidden" />
-        <span>{file ? file.name : "Drop project file"}</span>
+
+        <span className="text-sm text-gray-300">
+          {file ? file.name : "Drop project file"}
+        </span>
       </label>
 
-     
       {/* FORM */}
-      <div className={`${showForm ? "opacity-100" : "opacity-0 h-0 overflow-hidden"}`}>
-
+      <div
+        className={clsx(
+          showForm ? "opacity-100" : "opacity-0 h-0 overflow-hidden"
+        )}
+      >
         <input
-          className={theme.input}
+          className="w-full rounded-xl border border-white/10 bg-black/10 p-3 text-white"
           placeholder="Title"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
         />
-         {/* THUMBNAIL */}
-      <label
-        {...thumbDrop.dragProps}
-        className={`${theme.dropzone} h-28 flex items-center justify-center overflow-hidden ${thumbDrop.isDragging ? "border-purple-400 bg-purple-500/10" : ""}`}
-      >
-        <input
-          type="file"
-          accept="image/*"
-          onChange={(e) => {
-            const f = e.target.files?.[0] ?? null
-            setThumbnail(f)
-            if (f) setThumbnailPreview(URL.createObjectURL(f))
-          }}
-          className="hidden"
-        />
 
-        {thumbnailPreview ? (
-          <img src={thumbnailPreview} className="w-full h-full object-cover" />
-        ) : (
-          <span className="text-xs text-gray-400">Drop thumbnail</span>
-        )}
-      </label>
+        {/* THUMBNAIL */}
+        <label
+          {...thumbDrop.dragProps}
+          className="mt-4 h-28 flex items-center justify-center overflow-hidden rounded-xl border-2 border-dashed border-white/20 bg-black/10 cursor-pointer"
+        >
+          <input
+            type="file"
+            accept="image/*"
+            onChange={(e) => {
+              const f = e.target.files?.[0] ?? null
+              setThumbnail(f)
+              if (f) setThumbnailPreview(URL.createObjectURL(f))
+            }}
+            className="hidden"
+          />
+
+          {thumbnailPreview ? (
+            <img
+              src={thumbnailPreview}
+              className="w-full h-full object-cover"
+            />
+          ) : (
+            <span className="text-gray-400">Drop thumbnail</span>
+          )}
+        </label>
 
         <textarea
-          className={theme.textarea}
+          className="mt-4 w-full rounded-xl border border-white/10 bg-black/10 p-3 text-white resize-none"
           placeholder="Description"
           value={description}
           onChange={(e) => setDescription(e.target.value)}
         />
 
         <select
-          className={theme.select}
+          className="mt-4 w-full rounded-xl border border-white/10 bg-black/10 p-3 text-white"
           value={type}
           onChange={(e) => setType(e.target.value)}
         >
@@ -145,7 +157,7 @@ const CloudinarySanityUpload = () => {
         <button
           onClick={onUpload}
           disabled={status === "uploading"}
-          className={theme.uploadButton}
+          className="mt-4 w-full p-3 rounded-xl font-medium bg-purple-600 hover:bg-purple-500 transition"
         >
           {status === "uploading"
             ? "Uploading..."
@@ -153,7 +165,6 @@ const CloudinarySanityUpload = () => {
             ? "Uploaded ✓"
             : "Upload Project"}
         </button>
-
       </div>
     </div>
   )
