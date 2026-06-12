@@ -19,7 +19,7 @@ export const SkillData = [
 export const Socials = [
   {
     name: "Github",
-    src: "/github.svg",
+    src: "/github.png",
     link: "https://github.com/knjprojects",
   },
   {

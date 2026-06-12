@@ -19,11 +19,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={ `w-full h-full`}> 
+      <body className='min-h-dvh overflow-y-auto'> 
         <Providers>
-          <Navbar />
-          <Transition />
-          {children}
+          {/*<Navbar />*/}
+          <main className="pt-16 flex-1">
+            {/*To add scroll to a content container in Tailwind
+             CSS, you must combine a maximum height or width utility with an overflow utility */}
+            {children}
+          </main>
         </Providers>
         </body>
     </html>

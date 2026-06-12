@@ -7,16 +7,16 @@ import Link from "next/link";
 
 const HeroSection = () => {
   return (
-    <section className="lg:py-16">
-      <div className="grid grid-cols-1 sm:grid-cols-12">
+    <section className="lg:py-16 w-full h-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-12 ">
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
-          className="col-span-8 place-self-center text-center sm:text-left justify-self-start"
+          className="col-span-8 place-self-center text-center sm:text-left justify-self-start overflow-y-auto"
         >
           <h1 className=" text-white mb-4 text-4xl sm:text-5xl lg:text-8xl lg:leading-normal font-extrabold">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-secondary-600">
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-primary-400 to-secondary-600">
               Hello, I&apos;m{" "}
             </span>
             <br></br>
@@ -36,7 +36,7 @@ const HeroSection = () => {
               repeat={Infinity}
             />
           </h1>
-          <p className="text-base sm:text-lg mb-6 lg:text-xl">
+          <p className="text-base sm:text-md mb-6 lg:text-lg">
             With experience in graphic design, game development, database structuring, and many more within my pursuit of my Computer Science at the University of the West Indies,  and through freelancing over the past 4 years, I am a valuable team player who sees no limit to my potential and what I can bring to any group of aspiring artistes and business owners. I aim to make a huge dent in the cultural landscape not only in Tech but also the lifestyle we live as a people
           </p>
           <div>
@@ -62,16 +62,20 @@ const HeroSection = () => {
           transition={{ duration: 0.5 }}
           className="col-span-4 place-self-center mt-4 lg:mt-0"
         >
-          <div className="rounded-full bg-[rgb(24,24,24)] w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative">
+          <div className="ml-24 rounded-full bg-[rgb(24,24,24)] w-48 h-48 lg:w-78 lg:h-78 relative">
             <Image
               src="/josh.jfif"
               alt="hero image"
-              className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+              className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 rounded-full"
               width={300}
               height={300}
             />
           </div>
         </motion.div>
+
+        <div className="w-72 h-82 bg-red-600">
+          <p>Bryyy</p>
+        </div>
       </div>
     </section>
     

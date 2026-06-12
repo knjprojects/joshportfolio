@@ -1,30 +1,39 @@
 "use client"
-
+import { useState,useEffect } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import clsx from "clsx"
+import HeroSection from "@/components/Hero"
+import SplashScreen from "@/components/SpashScreen"
+const Home = () => {
+  const [showSplash, setShowSplash] = useState(true);
 
-export default function Home() {
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowSplash(false);
+    }, 4000);
+
+    return () => clearTimeout(timer);
+  }, []);
+   
   return (
-    <main className="w-screen min-h-screen relative flex flex-col">
 
+  
+      
+      <main className="w-screen h-auto relative flex flex-col bg-linear-to-tr from-emerald-800 to-blue-500">
+    {/*<SplashScreen show={showSplash}  */} 
       {/* HERO SECTION */}
-      <div className="w-full flex items-center justify-center px-6 py-10">
+      <div className="w-full flex items-center justify-center px-6 py-10 ">
         
         <div className={clsx(
-          "w-full sm:w-[80%] max-w-[750px] flex flex-col gap-5",
+          "w-full sm:w-[80%] max-w-187.5 flex flex-col gap-5",
           "backdrop-blur-md border border-white/10 rounded-2xl",
           "p-6 shadow-lg shadow-black/20"
         )}>
 
-          <h1 className="text-3xl sm:text-4xl font-bold text-white">
-            Make anything possible with{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-red-500">
-              Software Development
-            </span>
-          </h1>
 
-          <p className="text-sm text-white/70">
+          <HeroSection/>
+          <p className="text-sm text-red-600">
             Graphic Design, CopyWriting, UI and UX.
           </p>
 
@@ -64,7 +73,7 @@ export default function Home() {
       </div>
 
       {/* IMAGES */}
-      <div className="absolute lg:bottom-0 right-0 z-[10] w-56 h-68 top-0">
+      <div className="absolute lg:bottom-0 right-0 z-10 w-56 h-68 top-0">
         {/*<Image
           src="/me.gif"
           alt="me coding"
@@ -82,7 +91,7 @@ export default function Home() {
         />*/}
       </div>
 
-      <div className="absolute bottom-0 z-[5] w-full h-auto">
+      <div className="absolute bottom-0 z-5 w-full h-auto">
         {/*<Image
           src="/trees.webp"
           alt="trees"
@@ -102,5 +111,7 @@ export default function Home() {
       />*/}
 
     </main>
+   
   )
 }
+export default Home

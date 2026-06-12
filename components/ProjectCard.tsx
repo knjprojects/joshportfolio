@@ -40,8 +40,8 @@ const ProjectCard = ({ title, description, image, link }: Props) => {
                     "0px 0px 25px rgba(139,92,246,.4), 0px 0px 35px rgba(6,182,212,.3)",
                     scale: 1.3,
                     }}
-                className="w-[300px] h-[280px] rounded-xl cursor-pointer 
-                perspective p-[2px]"
+                className="w-75 h-70 rounded-xl cursor-pointer 
+                perspective p-1"
         style={{
             background,
         }}

@@ -45,6 +45,7 @@ const GitHubLogoutButton = () => {
         items-center
         justify-center
         gap-2
+        font-semibold
       "
     >
       {loading && (

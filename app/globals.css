@@ -1,9 +1,8 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* this is the new sytnax and default cde for latest taiwind v4make sure tailwind.config.s exists and has the content feild Check tscnfig fr baseUr as we as path*/
+@import "tailwindcss";
 
 body {
-  overflow: hidden; 
+  overflow: hidden;
 }
 
 .flip-card-inner {
@@ -20,6 +19,7 @@ body {
 .flip-card-back {
   transform: rotateY(180deg);
 }
+
 .perspective {
   perspective: 1000px;
 }

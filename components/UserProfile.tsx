@@ -88,9 +88,9 @@ export default function UserProfile() {
             {/* ACTIONS */}
             <div className="mt-4 flex flex-col gap-2">
 
-              <button className="px-3 py-2 rounded-lg bg-white/10 hover:bg-white/20 transition">
+              <Link href={'/dash'} className="text-center px-3 py-2 rounded-lg bg-white/10 hover:bg-white/20 transition">
                 View Profile
-              </button>
+              </Link>
 
               <Link
                 href="/repos"
@@ -98,9 +98,13 @@ export default function UserProfile() {
               >
                 My Repos
               </Link>
-
+              <Link
+                href="/drive"
+                className="font-semibold text-sm text-green-600 hover:text-white transition-all text-center px-3 rounded-lg py-2 "
+              >
+                GoogleDrive
+              </Link>
               <GitHubLogoutButton />
-              <GoogleSignInButton />
 
             </div>
 

@@ -88,7 +88,7 @@ export default function GitHubRepos() {
           >
             {/* TOP ROW */}
             <div className="flex justify-between items-start">
-              <h2 className="text-white font-semibold text-lg">
+              <h2 className="text-gray-700 font-semibold text-lg">
                 {repo.name}
               </h2>
 

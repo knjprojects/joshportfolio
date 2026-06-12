@@ -10,7 +10,7 @@ const page = (props: Props) => {
   const { data: session, status } = useSession();
   return (
       <div className='flex flex-col items-center'>
-      <UserProfile />
+      {/*<UserProfile />*/}
       <GitHubRepos />
     </div>
   )

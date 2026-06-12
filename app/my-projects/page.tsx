@@ -24,9 +24,9 @@ const Page = () => {
   }, [])
 
   return (
-    <div className="bg-teal-600 flex-col items-center w-full h-full justify-center flex ">
-      <div className="flex flex-col w-64 h-32 bg-transparent justify-center mt-12">
-        <GoogleConnectButton/>
+    <div className="flex bg-teal-600 flex-col items-center w-full h-full justify-center">
+      <div className="flex flex-col w-64 h-auto bg-transparent justify-center mt-12">
+       
         <CloudinarySanityUpload />
       </div>
       <div

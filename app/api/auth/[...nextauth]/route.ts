@@ -24,7 +24,7 @@ const handler = NextAuth({
           scope:
             "openid email profile https://www.googleapis.com/auth/drive.file",
           access_type: "offline",
-          prompt: "consent",
+          prompt: "select_account",//"consent", cnsent fr autmatic gin with current accunt
         },
       },
     }),
@@ -36,16 +36,19 @@ const handler = NextAuth({
       if (account) {
         token.accessToken = account.access_token;
         token.refreshToken = account.refresh_token
+        token.provider = account.provider
       }
       
     }
     return token;
   },
 
-  async session({ session, token }) {
+    async session({ session, token }) {
+    
     (session as any).githubUsername =
       token.githubUsername;
-    (session as any).accessToken = token.accessToken;
+      (session as any).accessToken = token.accessToken;
+      (session as any).provider = token.provider as string
 
     return session;
   },
