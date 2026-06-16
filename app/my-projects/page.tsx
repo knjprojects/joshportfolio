@@ -31,7 +31,7 @@ const Page = () => {
       </div>
       <div
       style={{ backgroundImage: "url(/bg-3.jpg)" }}
-      className="w-screen h-screen flex items-center justify-center bg-center bg-cover"
+      className="w-screen min-h-screen flex items-center justify-center bg-center bg-cover"
     >
       
         <div className="space-x-4 place-items-center gap-4 grid grid-cols-2 md:grid-cols-3 pb-4"> {

@@ -9,9 +9,10 @@ const page = (props: Props) => {
   
   const { data: session, status } = useSession();
   return (
-      <div className='flex flex-col items-center'>
+      <div className='flex flex-col items-center bg-gray-800 '>
       {/*<UserProfile />*/}
-      <GitHubRepos />
+      <div className='m-4 flex space-between'> <GitHubRepos /></div>
+     
     </div>
   )
 }

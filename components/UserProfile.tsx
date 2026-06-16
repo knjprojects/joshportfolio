@@ -30,7 +30,7 @@ export default function UserProfile() {
       {/* PROFILE BUTTON */}
       <button
         onClick={() => setOpen((v) => !v)}
-        className="flex items-center gap-2 px-3 py-2 rounded-full bg-white/10 hover:bg-white/20 transition text-white"
+        className="flex items-center gap-2 px-3 py-2 rounded-full bg-sky-400 hover:bg-gray-800 transition text-white"
       >
        <Image
           src={session.user?.image || "https://37assets.37signals.com/svn/765-default-avatar.png"}
@@ -39,7 +39,7 @@ export default function UserProfile() {
           height={32}
           className="rounded-full object-cover"
 />
-        <span className="text-sm font-medium">
+        <span className="text-sm font-medium  text-white">
           {session.user?.name || "User"}
         </span>
       </button>
@@ -52,7 +52,7 @@ export default function UserProfile() {
             animate={motionTheme.dropdown.animate}
             exit={motionTheme.dropdown.exit}
             transition={motionTheme.dropdown.transition}
-            className="absolute right-0 mt-2 w-72 rounded-xl bg-black/80 border border-white/10 backdrop-blur-md text-white shadow-xl p-4 z-50"
+            className="absolute right-0 mt-2 w-72 rounded-xl bg-black/90 border border-white/10 backdrop-blur-md text-white shadow-xl p-4 z-50"
           >
 
             {/* USER INFO */}

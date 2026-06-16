@@ -19,14 +19,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className='min-h-dvh overflow-y-auto'> 
+      <body className='min-h-dvh'> 
         <Providers>
-          {/*<Navbar />*/}
-          <main className="pt-16 flex-1">
-            {/*To add scroll to a content container in Tailwind
-             CSS, you must combine a maximum height or width utility with an overflow utility */}
+          <div className="flex flex-col">
+            <Navbar />
+          <main className="h-screen overflow-y-scroll snap-y snap-mandatory">
+            {/*To add scroll to a content container in TailwindCSS, you must combine a maximum height or width utility with an overflow utility , make sure verfw nt hidden in gbas,css*/}
+
             {children}
-          </main>
+            </main>
+          </div>
         </Providers>
         </body>
     </html>

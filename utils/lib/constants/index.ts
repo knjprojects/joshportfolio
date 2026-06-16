@@ -1,19 +1,174 @@
 import { RxHome, RxPerson, RxDashboard, RxClipboard } from "react-icons/rx"
 
-
 export const SkillData = [
-  { name: "Html 5", Image: "/html.png", width: 80, height: 80 },
-  { name: "Css", Image: "/css.png", width: 80, height: 80 },
-  { name: "JavaScript", Image: "/js.png", width: 65, height: 65 },
-  { name: "Tailwind Css", Image: "/tailwind.png", width: 80, height: 80 },
-  { name: "React", Image: "/react.png", width: 80, height: 80 },
-  { name: "Redux", Image: "/redux.png", width: 80, height: 80 },
-  { name: "TypeScript", Image: "/ts.png", width: 80, height: 80 },
-  { name: "Next js 13", Image: "/next.png", width: 80, height: 80 },
-  { name: "Framer Motion", Image: "/framer.png", width: 80, height: 80 },
-  { name: "Stripe Payment", Image: "/stripe.webp", width: 80, height: 80 },
-  { name: "Node js", Image: "/node-js.png", width: 80, height: 80 },
-  { name: "Mongo db", Image: "/mongodb.png", width: 40, height: 40 },
+  {
+    name: "Html 5",
+    Image: "/html.png",
+    width: 80,
+    height: 80,
+    description:
+      "The foundation of every website. Provides the structure and semantic layout of web applications.",
+  },
+  {
+    name: "Css",
+    Image: "/css.png",
+    width: 80,
+    height: 80,
+    description:
+      "Styles and designs websites with responsive layouts, animations, and modern user interfaces.",
+  },
+  {
+    name: "JavaScript",
+    Image: "/js.png",
+    width: 65,
+    height: 65,
+    description:
+      "The programming language of the web. Adds interactivity, logic, and dynamic behavior to applications.",
+  },
+  {
+    name: "Tailwind Css",
+    Image: "/tailwind.png",
+    width: 80,
+    height: 80,
+    description:
+      "Utility-first CSS framework for rapidly building responsive and modern user interfaces.",
+  },
+  {
+    name: "React",
+    Image: "/react.png",
+    width: 80,
+    height: 80,
+    description:
+      "Component-based frontend library used to create interactive and scalable web applications.",
+  },
+  {
+    name: "Redux",
+    Image: "/redux.png",
+    width: 80,
+    height: 80,
+    description:
+      "State management solution for handling complex application data across multiple components.",
+  },
+  {
+    name: "TypeScript",
+    Image: "/ts.png",
+    width: 80,
+    height: 80,
+    description:
+      "A strongly typed version of JavaScript that improves code quality, maintainability, and developer productivity.",
+  },
+  {
+    name: "Next.js",
+    Image: "/next.png",
+    width: 80,
+    height: 80,
+    description:
+      "Full-stack React framework with server components, API routes, SEO optimization, and high performance.",
+  },
+  {
+    name: "Framer Motion",
+    Image: "/framer.png",
+    width: 80,
+    height: 80,
+    description:
+      "Animation library for React used to create smooth transitions, gestures, and cinematic user experiences.",
+  },
+  {
+    name: "Stripe Payment",
+    Image: "/stripe.webp",
+    width: 80,
+    height: 80,
+    description:
+      "Secure payment processing platform for subscriptions, one-time purchases, and SaaS billing systems.",
+  },
+  {
+    name: "Node.js",
+    Image: "/node-js.png",
+    width: 80,
+    height: 80,
+    description:
+      "JavaScript runtime used to build scalable backend services, APIs, and server-side applications.",
+  },
+  {
+    name: "MongoDB",
+    Image: "/mongodb.png",
+    width: 40,
+    height: 40,
+    description:
+      "NoSQL database designed for flexible schemas, rapid development, and scalable data storage.",
+  },
+  {
+    name: "Prisma",
+    Image: "/prisma.png",
+    width: 80,
+    height: 80,
+    description:
+      "Type-safe ORM that makes working with databases simple, fast, and developer-friendly.",
+  },
+  {
+    name: "Google Drive API",
+    Image: "/google-drive.png",
+    width: 80,
+    height: 80,
+    description:
+      "Integrates cloud storage directly into applications for file management, uploads, and automation.",
+  },
+  {
+    name: "YouTube API",
+    Image: "/youtube.png",
+    width: 80,
+    height: 80,
+    description:
+      "Access YouTube videos, channels, playlists, and search functionality directly inside applications.",
+  },
+  {
+    name: "Firebase",
+    Image: "/firebase.png",
+    width: 80,
+    height: 80,
+    description:
+      "Backend platform providing authentication, databases, storage, analytics, and hosting.",
+  },
+  {
+    name: "OpenAI",
+    Image: "/openai.png",
+    width: 80,
+    height: 80,
+    description:
+      "AI platform used to power intelligent assistants, content generation, search, and automation.",
+  },
+  {
+    name: "Flutter",
+    Image: "/flutter.png",
+    width: 80,
+    height: 80,
+    description:
+      "Cross-platform framework for building mobile, desktop, and web applications from a single codebase.",
+  },
+  {
+    name: "GitHub",
+    Image: "/github.png",
+    width: 80,
+    height: 80,
+    description:
+      "Version control and collaboration platform used to manage source code and software projects.",
+  },
+  {
+    name: "Sanity CMS",
+    Image: "/sanity.png",
+    width: 80,
+    height: 80,
+    description:
+      "Headless CMS that provides structured content management with real-time collaboration.",
+  },
+  {
+    name: "Cloudinary",
+    Image: "/cloudinary.png",
+    width: 80,
+    height: 80,
+    description:
+      "Cloud-based media management platform for image optimization, video delivery, and transformations.",
+  },
 ]
 
 export const Socials = [

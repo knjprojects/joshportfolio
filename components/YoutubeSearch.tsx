@@ -18,13 +18,13 @@ import { useState } from "react"
     }
 
     return (
-        <div className="mt-15 p-6">
-        <div className="flex gap-2">
+        <div className="">
+        <div className="flex gap-2 pt-24">
             <input
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder="Search YouTube"
-            className="border p-2 rounded w-full text-black"
+            className="border p-2 rounded w-full text-black   "
             />
 
             <button
@@ -34,7 +34,7 @@ import { useState } from "react"
             Search
             </button>
         </div>
-        <p className="text-white text-center rounded-xl bg-gray-600">
+        <p className="text-white text-center rounded-sm bg-gray-600">
                 Found {videos.length} videos
         </p>
         <div className="grid md:grid-cols-3 gap-4 mt-6">

@@ -69,7 +69,7 @@ export default function GitHubRepos() {
       variants={container}
       initial="hidden"
       animate="show"
-      className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full"
+      className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full m-3"
     >
       {repos.map((repo) => {
         const isOpen = openRepoId === repo.id
@@ -82,13 +82,13 @@ export default function GitHubRepos() {
               setOpenRepoId(isOpen ? null : repo.id)
             }
             className={clsx(
-              "relative p-5 rounded-xl border border-white/10 bg-white/5",
+              "relative p-2 rounded-xl border border-white/10 bg-white/5",
               "cursor-pointer hover:bg-white/10 transition-all"
             )}
           >
             {/* TOP ROW */}
             <div className="flex justify-between items-start">
-              <h2 className="text-gray-700 font-semibold text-lg">
+              <h2 className="text-teal-400 font-semibold text-lg">
                 {repo.name}
               </h2>
 
@@ -119,7 +119,7 @@ export default function GitHubRepos() {
                   <a
                     href={repo.url}
                     target="_blank"
-                    className="text-blue-400 text-xs mt-2 inline-block hover:underline"
+                    className="text-sky-500 text-xs mt-2 inline-block hover:underline"
                     onClick={(e) => e.stopPropagation()}
                   >
                     Open Repo →

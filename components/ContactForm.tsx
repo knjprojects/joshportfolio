@@ -1,5 +1,5 @@
 import React from "react";
-import EmailSection from "./EmailSection";  
+//import EmailSection from "./EmailSection";  
 const ContactForm = () => {
   /*return (
     <EmailSection />

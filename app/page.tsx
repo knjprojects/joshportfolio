@@ -5,6 +5,7 @@ import Link from "next/link"
 import clsx from "clsx"
 import HeroSection from "@/components/Hero"
 import SplashScreen from "@/components/SpashScreen"
+import Section from "@/components/Section"
 const Home = () => {
   const [showSplash, setShowSplash] = useState(true);
 
@@ -20,10 +21,18 @@ const Home = () => {
 
   
       
-      <main className="w-screen h-auto relative flex flex-col bg-linear-to-tr from-emerald-800 to-blue-500">
-    {/*<SplashScreen show={showSplash}  */} 
+      <main className="w-full h-auto flex flex-col bg-linear-to-tr from-emerald-800 to-blue-500">
+      {/*<SplashScreen show={showSplash}  */} 
+      <SplashScreen show={showSplash} />
       {/* HERO SECTION */}
-      <div className="w-full flex items-center justify-center px-6 py-10 ">
+      <HeroSection />
+   
+      <Section bg="bg-black text-white">Home</Section>
+      <Section bg="bg-blue-500 text-white">About</Section>
+      <Section bg="bg-purple-500 text-white">Projects</Section>
+    
+      <section className="w-full flex items-center justify-center h-screen snap-start ">
+        <div >
         
         <div className={clsx(
           "w-full sm:w-[80%] max-w-187.5 flex flex-col gap-5",
@@ -31,9 +40,7 @@ const Home = () => {
           "p-6 shadow-lg shadow-black/20"
         )}>
 
-
-          <HeroSection/>
-          <p className="text-sm text-red-600">
+          <p className="text-md font-semibold">
             Graphic Design, CopyWriting, UI and UX.
           </p>
 
@@ -49,66 +56,36 @@ const Home = () => {
 
             <Link
               href="/my-projects"
-              className="px-5 py-3 rounded-2xl border border-white/10 bg-white/5 text-white hover:opacity-80 transition-all"
+              className="px-4 py-2 rounded-2xl border border-white/10 bg-white/5 text-white hover:bg-white/20 transition-all"
             >
               My projects
             </Link>
 
             <Link
               href="/contact-me"
-              className="px-5 py-3 rounded-2xl border border-white/10 bg-white/5 text-white hover:opacity-80 transition-all"
+              className="px-4 py-2 rounded-2xl border border-white/10 bg-white/5 text-white hover:bg-white/20 transition-all"
             >
               Contact me
             </Link>
 
             <Link
               href="/blog"
-              className="text-sm text-white/60 hover:text-white transition-all"
+              className="px-4 py-2 rounded-2xl border border-white/10 bg-white/5 text-white hover:bg-white/20 transition-all"
             >
               Blog
             </Link>
 
           </div>
         </div>
-      </div>
+      </div></section>
+    
 
       {/* IMAGES */}
-      <div className="absolute lg:bottom-0 right-0 z-10 w-56 h-68 top-0">
-        {/*<Image
-          src="/me.gif"
-          alt="me coding"
-          height={300}
-          width={300}
-          className="absolute right-10 top-40"
-        />*/}
+     
 
-        {/*} <Image
-          src="/cliff.webp"
-          alt="cliff"
-          width={480}
-          height={480}
-          className="w-auto h-auto"
-        />*/}
-      </div>
-
-      <div className="absolute bottom-0 z-5 w-full h-auto">
-        {/*<Image
-          src="/trees.webp"
-          alt="trees"
-          width={2000}
-          height={2000}
-          className="w-full h-full"
-        />*/}
-      </div>
-
-      {/*<Image
-        src="/stars.png"
-        alt="stars"
-        height={300}
-        width={300}
-        className="absolute top-0 left-0 z-[10] w-auto h-auto"
-        unoptimized
-      />*/}
+      
+    
+      
 
     </main>
    

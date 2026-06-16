@@ -1,10 +1,10 @@
 /* this is the new sytnax and default cde for latest taiwind v4make sure tailwind.config.s exists and has the content feild Check tscnfig fr baseUr as we as path*/
 @import "tailwindcss";
 
-body {
+
+body{
   overflow: hidden;
 }
-
 .flip-card-inner {
   transition: transform 0.6s;
   transform-style: preserve-3d;
@@ -23,7 +23,6 @@ body {
 .perspective {
   perspective: 1000px;
 }
-
 .backface-hidden {
   backface-visibility: hidden;
 }
@@ -31,3 +30,26 @@ body {
 .rotate-y-180 {
   transform: rotateY(180deg);
 }
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.02);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.bounce-in {
+  animation: bounceIn 0.5s ease-out;
+}
+/*mine */
+.hovers{
+  @apply hover:ease-in transition hover:scale-105;
+}
+
+

@@ -4,10 +4,11 @@ import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
 import Link from "next/link";
+//import AnimatedBorderButton from "./AnimatedButtonBorder";
 
 const HeroSection = () => {
   return (
-    <section className="lg:py-16 w-full h-auto">
+    <section className="lg:py-16 w-full  p-6 h-screen snap-start flex items-center justify-center ">
       <div className="grid grid-cols-1 sm:grid-cols-12 ">
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
@@ -42,10 +43,11 @@ const HeroSection = () => {
           <div>
             <Link
               href="/#contact"
-              className="px-6 inline-block py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-200 text-white"
+              className="animate-border-spin px-6 hover:text-black  inline-block py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-200 text-white"
             >
               Hire Me
             </Link>
+          
             <Link
               href="/"
               className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-800 text-white mt-3"
@@ -72,10 +74,6 @@ const HeroSection = () => {
             />
           </div>
         </motion.div>
-
-        <div className="w-72 h-82 bg-red-600">
-          <p>Bryyy</p>
-        </div>
       </div>
     </section>
     
